@@ -1,49 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Save Files</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            display: inline-block;
-            text-align: left;
-        }
-        li {
-            background-color: #007BFF;
-            color: white;
-            margin: 10px 0;
-            padding: 12px 20px;
-            border-radius: 5px;
-        }
-        li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-        }
-        li a:hover {
-            background-color: #0056b3;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cool Save Files</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding: 50px;
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+    }
+    .save-block {
+        background-color: #eaeaea;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        text-align: left;
+    }
+    .save-title {
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        color: #007BFF;
+        margin-bottom: 10px;
+    }
+    .save-title:hover {
+        text-decoration: underline;
+    }
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+</style>
 </head>
 <body>
-    <h1>Cool Save Files!</h1>
-    <ul>
-        <li><a href="#" data-save="Car Fun!">Car Fun!</a></li>
-        <li><a href="#" data-save="Pendulum">Pendulum</a></li>
-        <li><a href="#" data-save="Parkor 1">Parkor 1</a></li>
-        <li><a href="#" data-save="Parkor 2">Parkor 2</a></li>
-    </ul>
+<h1>Cool Save Files!</h1>
+
+<div class="save-block">
+    <div class="save-title" onclick="copyToClipboard('carFun')">Car Fun!</div>
+    <pre id="carFun">~S:-14:0:-380:380:0:0:0:-1800:4:5~B-!r:0:-140:600:10m:1:0.3:0.5:0.4k:8947848S|-!r:-610:-40:10:110m:1:0.3:0.5:0.4k:8947848S|-!r:610:-40:10:110m:1:0.3:0.5:0.4k:8947848S|appel70!r:-11:-15:10:14m:6:0:0.4:0.3L|72!c:56:-90:40m:1:0.6:0.3:0.2o:65k:16737340g:3:2-5|74!r:-11:-91:75:16k:3325695g:-5:43-4|77!c:-80:-90:40m:1:0.6:0.3:0.2o:257k:16737340g:4:-5|79!r:-11:-57:28:16o:-90k:3325695g:-4:-5-3-2-10|83!r:-40:-6:28:16o:-88k:3325695g:-1:-4|84!r:16:-7:28:16o:-92k:3325695g:0:-4~P-!J:7:6:0:0:-69:1|-!J:5:6:0:0:68:1|-!J:8:6:23:0:0:11a:0:0:1|-!J:8:9:-26:-13:25:15a:0:0:1|-!J:8:10:-26:15:24:-11a:0:0:1</pre>
+</div>
+
+<div class="save-block">
+    <div class="save-title" onclick="copyToClipboard('pendulum')">Pendulum</div>
+    <pre id="pendulum">~S:0:0:0:0:0:0:0:-1800:4:5~B-!r:0:-150:160:10m:1:0.3:0.5:0.4k:8947848S|appel84!r:-95:-126:10:14m:6:0:0.4:0.3L|89!r:-10:-5:75:16o:990k:3325695~P-!W:3:0:-72:1:-10:67|-!W:3:0:-68:1:-10:63</pre>
+</div>
+
+<div class="save-block">
+    <div class="save-title" onclick="copyToClipboard('parkor1')">Parkor 1</div>
+    <pre id="parkor1">~S:-380:0:-380:380:0:0:0:-1800:4:5~B-!r:0:-140:600:10m:1:0.3:0.5:0.4k:8947848S|appel5!r:-486:-116:10:14m:6:0:0.4:0.3L|11!r:-376:-60:28:16k:3325695Z|19!r:-250:-54:75:16o:89k:3325695Z|21!c:-133:-32:40m:1:0.6:0.3:0.2o:-180k:16737340|22!c:-5:-34:40m:1:0.6:0.3:0.2o:-64k:16737340|23!c:122:-37:40m:1:0.6:0.3:0.2o:-271k:16737340|27!r:262:-43:75:16o:-1215k:3325695|32!r:461:-103:25:25o:90k:11822335Z|34!r:461:-53:25:25k:11822335Z|35!r:511:-103:25:25o:-269k:11822335Z|38!r:512:-53:25:25o:1k:11822335Z|40!r:561:-105:25:25k:11822335Z|42!r:562:-55:25:25k:11822335Z|47!r:586:40:75:16o:-90k:3325695Z~P-!W:5:0:0:-12:-133:-20|-!W:6:0:-4:2:-5:-30|-!W:7:0:9:0:122:-28|-!W:8:0:-2:-2:262:-40</pre>
+</div>
+
+<div class="save-block">
+    <div class="save-title" onclick="copyToClipboard('parkor2')">Parkor 2</div>
+    <pre id="parkor2">~S:220:0:-380:380:0:0:0:-1800:4:5~B-!r:0:-140:1000:10m:1:0.3:0.5:0.4k:8947848S|31!r:-550:-114:75:16k:3325695Z|34!p:-170:11:3:0:28:-24:-14:24:-14o:-194k:5296730|37!r:-553:-73:25:25k:11822335Z|40!r:-912:-114:28:16o:180k:3325695|42!r:-592:-21:25:25k:11822335Z|49!r:-499:45:25:25o:-45k:11822335Z|51!p:-366:65:6:24:-7:11:23:-14:19:-27:-1:-10:-19:14:-22o:9k:16720293|52!c:64:17:40m:1:0.6:0.3:0.2o:-12k:16737340|55!r:321:44:25:25o:-77k:11822335Z|57!p:248:122:5:-75:-5:0:-15:75:-5:75:11:-75:11m:2:0.1:0.5:0.4o:2k:13148256|58!r:368:58:25:25o:13k:11822335Z|60!p:248:34:5:-75:-5:0:-15:75:-5:75:11:-75:11m:2:0.1:0.5:0.4o:-73k:13148256Z|62!p:484:242:5:-75:-5:0:-15:75:-5:75:11:-75:11m:2:0.1:0.5:0.4o:94k:13148256Z|63!r:483:152:28:16o:-10k:3325695Z|65!c:416:159:40m:1:0.6:0.3:0.2o:553k:16737340Z|73!p:348:-70:5:-75:-5:0:-15:75:-5:75:11:-75:11m:2:0.1:0.5:0.4o:-21k:13148256Z|106!c:952:-110:20m:1:0.6:0.3:0.2o:-907k:16737340|108!c:992:-110:20m:1:0.6:0.3:0.2o:-957k:16737340|111!p:394:103:3:0:28:-24:-14:24:-14o:11k:5296730Z|115!c:-61:17:20m:3:0.6:0.3:0.2k:9127187Z|123!p:205:-66:5:-75:-5:0:-15:75:-5:75:11:-75:11m:2:0.1:0.5:0.4o:56k:13148256Z|124!p:271:-109:5:-25:9:-16:-21:16:-21:25:9:0:27m:1:0.4:0.3:0.2k:16762930|127!c:444:-111:20m:1:0.6:0.3:0.2k:16737340|128!c:444:-72:20m:1:0.6:0.3:0.2k:16737340|129!c:444:-33:20m:1:0.6:0.3:0.2k:16737340|130!c:444:7:20m:1:0.6:0.3:0.2k:16737340|131!c:444:46:20m:1:0.6:0.3:0.2k:16737340|132!c:444:86:20m:1:0.6:0.3:0.2k:16737340|appel134!r:224:16:10:14m:6:0:0.4:0.3L~P-!W:3:0:1:-2:-170:13|-!W:8:0:4:20:-365:86|-!W:9:0:-1:2:64:20|-!W:11:0:-74:3:174:123</pre>
+</div>
+
+<script>
+function copyToClipboard(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Copied save: " + id);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+</script>
+
 </body>
 </html>
